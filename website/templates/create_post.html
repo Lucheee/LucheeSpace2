@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<style>
+    .btn:hover{
+       background-color: rgb(1, 32, 1);
+       color: white;
+       transition-duration: 0.5s;
+    }
+    h1{
+    padding: 20px;
+    color: rgb(3, 90, 54);
+    }
+</style>
+<h1 align="center">Post Something</h1>
+
+<form method="POST">
+    <div class="form-group">
+    <label for="title">Title</label>
+    <input
+            id="title"
+      type="text"
+      name="title"
+      class="form-control"
+      placeholder="What's Your Post About?"
+      required
+    />
+  </div>
+    <br>
+     <div class="form-group">
+    <label for="content">Content</label>
+    <textarea name="content" id="content" class="form-control" placeholder="Create Post"></textarea>
+  </div>
+
+    <br>
+    <div align="center">
+        <button type="submit" class="btn btn-lg btn-warning">Post</button>
+    </div>
+
+
+<br>
+<div align="center">
+   <a href="/home":>
+    <button type="submit" class="btn btn-lg btn-secondary">Back</button></a>
+</div>
+</form>
+{% endblock %}
+
+
+
+
+

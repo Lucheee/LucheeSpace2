@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<style>
+    h3{
+        
+        color: rgb(3, 90, 54);
+        padding: 20px;
+         }
+
+    .btn:hover{
+       background-color: rgb(1, 32, 1);
+       color: white;
+       transition-duration: 0.5s;
+    }
+
+    .form-control{
+        width: 100%;
+        border-radius: 20px;
+    }
+    .container{
+    width: 600px;
+    }
+</style>
+
+<form method="post">
+    <h3 align="center">Log into your Lucheespace account</h3>
+   <div class="container">
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control border-success" name = "email"  id="floatingInput" placeholder="Email Address">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control border-success" name = "password" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+          </div>
+          <br>
+          <div align="center">
+              <button class="btn btn-warning" type="submit">Login</button>
+</div>
+      </div>
+
+</form>
+
+{% endblock %}

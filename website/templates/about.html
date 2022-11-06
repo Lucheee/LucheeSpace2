@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %} ABOUT ME{% endblock %}
+{% block content %}
+
+<style>
+.images{
+margin-left: 500px;
+width: 300px;
+height: 350px;
+border-radius: 200px;
+
+}
+
+.content{
+color: rgb(3, 90, 54);
+
+}
+
+.about{
+color: rgb(3, 90, 54);
+padding-left: 100px;
+padding-right: 100px;
+}
+</style>
+
+
+<h1 align="center" style="padding: 50px; color: rgb(3, 90, 54); font-size: 100px;">ABOUT ME</h1>
+
+   <img class="images"
+            src="{{url_for('static',filename= 'images/mypicture.jpg')}}"
+  >
+<div class="content">
+{% if current_user.is_authenticated %}
+<h2 align="center">Hello, {{ current_user.username }}!, Welcome to my blog!</h2>
+{% else %}
+<h2 align="center">Welcome to my blog! </h2>
+{% endif %}
+
+
+   </div>
+<br>
+
+<div class="about">
+  <p>I am a 22 year old from Lagos, Nigeria. I am currently enrolled in Altschool Africa studying Backend Engineering(Python).
+
+</p>
+
+<p>Self-love can be extremely difficult to come by. I discovered that my self-love & confidence came from fashion and web development.
+</p>
+  <p> My message for my fashion blog is to encourage everyone to dress in whatever you want, whatever makes you feel empowered & yourself. I encourage everyone to try that funky outfit & go out of your comfort zone. I want to help share tips & ideas that you can put into your own lifestyle to fit you. I want everyone to experience that confidence we all deserve to have.
+</p>
+<p>
+
+I hope my blog does all these things & more for you. Let's boost our confidence & love ourselves fully. Even if it’s one day at a time.
+</p>
+  <p>
+  Kindly note that Authentication is not required to go through posts on this blog, but you'll have
+  to <a href="{{url_for('auth.login')}}">log in </a> to post, like, comment, edit or delete your
+  articles.
+</p>
+
+<h4 align="center">
+ Thank you,
+    <br>
+Luchee Space.
+    </h4>
+  </div>
+{% endblock %}

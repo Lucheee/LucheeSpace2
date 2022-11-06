@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %} Signup {% endblock %}
+{% block content %}
+<style>
+    h3{
+        padding: 20px;
+        color: rgb(3, 90, 54);
+    }
+
+    .btn:hover{
+       background-color: rgb(1, 32, 1);
+       color: white;
+       transition-duration: 0.5s;
+    }
+
+    .form-control{
+        border-radius: 20px;
+    }
+
+    .form-select{
+        border-radius: 20px;
+    }
+
+    .container{
+    width: 600px;
+    }
+</style>
+
+<form method="post">
+    <h3 align="center">Create an account today!</h3>
+ <div class="container">
+      <div class="form-floating mb-3">
+        <input type="firstname" class="form-control border-success" name="firstname"  id="floatingFirstname" placeholder="Enter your firstname">
+        <label for="floatingInput">Firstname</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="lastname" class="form-control border-success" name="lastname"  id="floatingLastname" placeholder="Enter your lastname">
+        <label for="floatingInput">Lastname</label>
+      </div>
+    <div class="form-floating mb-3">
+        <input type="username" class="form-control border-success" name="username"  id="floatingUsername" placeholder="Enter your preferred username">
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control border-success" name = "email" id="floatingInput" placeholder="Email Address">
+        <label for="floatingInput">Email Address</label>
+      </div>
+
+      <br>
+      <div class="form-floating">
+        <input type="password" class="form-control border-success" name = "password1" id="floatingPassword1" placeholder="Password">
+        <label for="floatingPassword1">Password</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <input type="password" class="form-control border-success" name = "password2" id="floatingPassword2" placeholder="Confirm Password">
+        <label for="floatingPassword2">Confirm Password</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <select class="form-select border-success" id="floatingSelect" aria-label="Gender Select">
+          <option selected>Gender</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+          <option value="3">Prefer not to say</option>
+        </select>
+        <label for="floatingSelect"> Gender </label>
+      </div>
+    </div>
+          <br>
+          <div align="center">
+              <button class="btn btn-warning" type="submit">Sign Up</button>
+
+        </div>
+
+</form>
+
+{% endblock %}

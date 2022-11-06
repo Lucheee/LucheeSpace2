@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<style>
+    .card-body{
+    color: rgb(3, 90, 54);
+    }
+</style>
+<h1 align="center" style="padding: 20px; color:rgb(3, 90, 54); ">{% block header %}Posts{% endblock %}</h1>
+<div id="posts">
+{% for post in posts %}
+
+<div class="card border-dark">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <a href="/posts/{{ post.user.username }}" style="color: brown; font-size: 30px;">{{ post.user.username }}</a>
+        <!--Likes functionality -->
+        <div>
+           <span id="likes-count-{{post.id}}">
+        {{ post.likes|length }}</span>
+        {% if user.id in post.likes|map(attribute="author")|list %}
+        <i
+          class="fa-solid fa-heart"
+          id="like-button-{{post.id}}"
+          onclick="like({{post.id}})"
+        ></i>
+        {% else %}
+        <i
+          class="fa-regular fa-heart"
+          id="like-button-{{post.id}}"
+          onclick="like({{post.id}})"
+        ></i>
+        {% endif %}
+
+            {% if user.id == post.author %}
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-bs-toggle="dropdown">
+            </button>
+            <ul class="dropdown-menu">
+                <li> <a href="/delete-post/{{ post.id }}" class="dropdown-item">Delete</a> </li>
+                <li><a href="/edit/{{ post.id }}" class="dropdown-item">Edit Post</a></li>
+            </ul>
+        </div>
+            {% endif %}
+            </div>
+
+    </div>
+    <div class="card-body">
+        <div class="card-text"><h1>{{ post.title }}</h1></div>
+        <br>
+        <div class="card-text"><h4>{{ post.content }}</h4></div>
+        <h6>{{post.date_created.strftime('%d/%b/%Y')}}</h6>
+        <br>
+        <div class="collapse" id="comments-{{ post.id }}">
+            <div class="card">
+                <div class="card-body" id="comments-expanded-{{ post.id }}">
+                    {% for comment in post.comments %}
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <a href="/posts/{{ comment.user.username }}">
+                            {{ comment.user.username }}
+                        </a> : {{ comment.content }}
+                            </div>
+                    <div>
+                        <small class="text.muted">
+                            {{ comment.date_created }}
+                        </small>
+                        {% if user.id == post.author %}
+                         <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-bs-toggle="dropdown">
+            </button>
+            <ul class="dropdown-menu">
+                <li> <a href="/delete-comment/{{ comment.id }}" class="dropdown-item">Delete</a> </li>
+            </ul>
+        </div>
+                     {% endif %}
+                    </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <p class="card-text">
+        {% if post.comments|length > 0 %}
+        <a data-bs-toggle="collapse" href="#comments-{{ post.id }}" role="button">
+            <small>View {{ post.comments|length}} Comments</small>
+            </a>
+        {% else %}
+        <small class="text-muted">No comments</small>
+        {% endif %}
+        </p>
+              <form class="input-group mb-3" method="POST" action="/create-comment/{{post.id}}">
+    <input type="text" id="text" name="text" class="form-control" placeholder="Comment something!">
+    <button type="submit" class="btn" style="background-color: rgb(3, 90, 54); color: gold; ">Comment</button>
+</form>
+    </div>
+    <div class="card-footer text-muted">{{ post.date_created }}</div>
+
+</div>
+    <br>
+{% endfor %}
+    </div>
+{% block footer %}
+   <div align="center">
+       <a href="/create-post">
+        {% if current_user.is_authenticated %}
+          <button type="button" class="btn btn-lg" style="background-color: rgb(3, 90, 54); color: gold; ">
+           Create a post
+       </button></a>
+       {% else %}
+       <a href="{{url_for('auth.signup')}}" style="color: rgb(3, 90, 54); font-size: 30px;"> <b> Click here to get started </b> </a> 
+       {% endif %}
+   </div>
+
+{% endblock %}
+
+{% endblock %}

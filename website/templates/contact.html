@@ -1,0 +1,75 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+Contact {% endblock %}{% block content %}
+<style>
+ .btn:hover{
+       background-color: rgb(1, 32, 1);
+       color: white;
+       transition-duration: 0.5s;
+    }
+</style>
+
+<h1 align="center" style="font-size: 100px; padding-top: 50px; color: rgb(3, 90, 54);"> Contact Me</h1>
+<br>
+<br>
+
+
+<h4 align="center" style="color: rgb(3, 90, 54);">Want to Collab?
+    <br>
+  <br>
+Have a blog post
+    <br>
+  <br>
+you'd like to see?
+</h4>
+    <br>
+  <br>
+<br>
+<h3 align="center" style="color: rgb(3, 90, 54);">Let me know here!</h3>
+<br>
+
+
+<br>
+<!-- Form to submit for Complaints-->
+<form class="row g-3">
+  <div class="col-md-6">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Your name here">
+  </div>
+  <div class="col-md-6">
+    <label for="email" class="form-label">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
+  </div>
+  <div class="col-12">
+    <label for="tel" class="form-label">Phone</label>
+    <input type="tel" class="form-control" id="tel" placeholder="Your phone number">
+  </div>
+  <div class="col-12">
+    <label for="title" class="form-label">Title</label>
+    <input
+            id="title"
+      type="text"
+      name="title"
+      class="form-control"
+      placeholder="What's Your Message About?"
+      required
+    >
+  </div>
+  <div class="col-md-6">
+    <label for="message" class="form-label">Message</label>
+<textarea
+            id="message"
+      name="message"
+      cols="30"
+      rows="10"
+      class="form-control"
+      placeholder="Type your Message Here"
+      required
+    ></textarea>  </div>
+
+  <div class="col-12">
+<button type="submit" class="btn btn-lg btn-warning">Submit</button>  </div>
+</form>
+
+{% endblock %}
