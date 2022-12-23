@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6bbd273a9f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"> </script>
+    <title> ABOUT ME</title>
+</head>
+<style>
+    .navbar-brand{
+    padding-right: 700px;
+    padding-left: 20px;
+    margin: 10px;
+    color: rgb(3, 90, 54);
+    font-style: bold;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    img{
+        align-self: center;
+        padding-bottom: 50px;
+    }
+   .alert alert-danger d-flex align-items-center{
+   padding: 10px;
+   }
+   .bi flex-shrink-0 me-2{
+   padding: 10px;
+   }
+   .form-control{
+   width: 100%;
+   }
+
+   @media (max-width: 840px) {
+    .container {
+      width: 100%;
+      padding: 1rem;
+       }
+    }
+    footer{
+    margin-top: 100px;
+    padding: 20px;
+    color: rgb(3, 90, 54);
+}
+.images{
+padding-left: 400px;
+padding-top: 50px;
+}
+
+.fa-instagram{
+  color:  rgb(3, 90, 54);
+  padding-left: 600px;
+  padding-top: 50px;
+  font-size: 60px;
+}
+
+.fa-instagram:hover{
+ cursor: pointer;
+ color:rgb(206, 170, 9);
+  }
+
+  .fa-twitter{
+    color: rgb(3, 90, 54);
+  padding-top: 50px;
+  padding-left: 20px;
+  font-size: 60px;
+  }
+
+  .fa-twitter:hover{
+    cursor: pointer;
+    color:rgb(206, 170, 9);
+  }
+
+  .fa-github{
+    color: rgb(3, 90, 54);
+  padding-top: 50px;
+  padding-left: 20px;
+  font-size: 60px;
+  }
+  .fa-github:hover{
+    cursor: pointer;
+    color:rgb(206, 170, 9);
+  }
+  .fa-whatsapp{
+    color: rgb(3, 90, 54);
+  padding-top: 50px;
+  padding-left: 20px;
+  font-size: 60px;
+  }
+  .fa-whatsapp:hover{
+    cursor: pointer;
+    color:rgb(206, 170, 9);
+  }
+
+
+
+
+
+    
+</style>
+<body>
+<header>
+   <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <a class="navbar-brand" href="#">
+    <img src="https://i.pinimg.com/originals/08/d9/3d/08d93df316cb19390ddb1e575eab05ec.jpg" alt="Logo" style="width:40px; padding-top: 50px; " class="rounded-pill">
+
+    LUCHEE SPACE
+        </a>
+
+
+    <div class="container-fluid">
+        <button class="navbar-toggler bg-warning"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+        >
+            <span class="navbar-toggler-icon bg-light"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbar">
+          <div class="navbar-nav" >
+          <a class="nav-item nav-link" href="/home" style="color: rgb(3, 90, 54); font-size: 20px;">Home</a>
+          
+          <a class="nav-item nav-link" href="/login" style="color: rgb(3, 90, 54); font-size: 20px;">Login</a>
+          <a class="nav-item nav-link" href="/signup" style="color: rgb(3, 90, 54); font-size: 20px;">Sign Up</a>
+          <a class="nav-item nav-link" href="/about" style="color: rgb(3, 90, 54); font-size: 20px;">About</a>
+          <a class="nav-item nav-link" href="/contact" style="color: rgb(3, 90, 54); font-size: 20px;">Contact</a>
+              
+          </div>
+        </div>
+     </div>
+</nav>
+    </header>
+
+<!-- code to create alert warning sign-->
+   
+<div class="container">
+     
+    </div>
+   
+   
+   
+   
+<!-- Social media icons-->
+
+ <a href="https://instagram.com/oluchiiiruth/">
+  <i class="fa-brands fa-instagram"  ></i>
+ </a>
+ <a href="https://twitter.com/AlikaOluchi">
+  <i class="fa-brands fa-twitter"></i>
+ </a>
+ <a href="https://github.com/Lucheee/">
+  <i class="fa-brands fa-github"></i>
+ </a>
+ <a href="https://wa.me/message/23PQSWVCAE3SA1">
+ <i class="fa-brands fa-whatsapp"></i>
+ </a>
+ 
+ 
+
+
+  <main> <div class="container">
+
+<style>
+.images{
+margin-left: 500px;
+width: 300px;
+height: 350px;
+border-radius: 200px;
+
+}
+
+.content{
+color: rgb(3, 90, 54);
+
+}
+
+.about{
+color: rgb(3, 90, 54);
+padding-left: 100px;
+padding-right: 100px;
+}
+</style>
+
+
+<h1 align="center" style="padding: 50px; color: rgb(3, 90, 54); font-size: 100px;">ABOUT ME</h1>
+
+   <img class="images"
+            src="/static/images/mypicture.jpg"
+  >
+<div class="content">
+
+<h2 align="center">Welcome to my blog! </h2>
+
+
+
+   </div>
+<br>
+
+<div class="about">
+  <p>I am a 22 year old from Lagos, Nigeria. I am currently enrolled in Altschool Africa studying Backend Engineering(Python).
+
+</p>
+
+<p>Self-love can be extremely difficult to come by. I discovered that my self-love & confidence came from fashion and web development.
+</p>
+  <p> My message for my fashion blog is to encourage everyone to dress in whatever you want, whatever makes you feel empowered & yourself. I encourage everyone to try that funky outfit & go out of your comfort zone. I want to help share tips & ideas that you can put into your own lifestyle to fit you. I want everyone to experience that confidence we all deserve to have.
+</p>
+<p>
+
+I hope my blog does all these things & more for you. Let's boost our confidence & love ourselves fully. Even if it’s one day at a time.
+</p>
+  <p>
+  Kindly note that Authentication is not required to go through posts on this blog, but you'll have
+  to <a href="/login">log in </a> to post, like, comment, edit or delete your
+  articles.
+</p>
+
+<h4 align="center">
+ Thank you,
+    <br>
+Luchee Space.
+    </h4>
+  </div>
+</div></main>
+ <footer class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(192, 139, 3);">
+         <p class="footer">
+           <b> &copy: LucheeSpace
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        </b>
+         </p>
+    </footer>
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+-->
+<script
+      type="text/javascript"
+      src="/static/index.js">
+
+</script>
+
+</body>
+</html>
