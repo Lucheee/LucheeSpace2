@@ -1,5 +1,5 @@
 env
-__pycache__
-data.db
+/__pycache__
+database.db
 *pyc
 .DS_Store
