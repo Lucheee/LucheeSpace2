@@ -7,7 +7,6 @@ views = Blueprint("views", __name__)
 
 
 @views.route("/")
-@views.route("/home")
 def home():
     posts = Post.query.all()
     return render_template("home.html", user=current_user, posts=posts)
@@ -169,3 +168,6 @@ def contact():
         return redirect(url_for('views.home'))
 
     return render_template('contact.html', user=current_user)
+
+
+

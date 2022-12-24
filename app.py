@@ -4,5 +4,6 @@ from flask_frozen import Freezer
 app = create_app()
 freezer = Freezer(app)
 
+
 if __name__ == '__main__':
-    freezer.run(debug=True)
+    app.run(debug=True)
